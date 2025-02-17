@@ -1,0 +1,7 @@
+1) Bruteforce the otps
+
+2) send the otp send link for the otp rate limit bypass technique (also check on reset otp)
+
+3) analyse and change the response
+
+4) send the 0000 -default otp to accept the req  -> check this for detail (https://cybersecuritywriteups.com/how-i-made-2000-from-an-easy-bug-431f45d8783e)
