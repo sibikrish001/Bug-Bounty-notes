@@ -1,0 +1,11 @@
+1) using subfinder to gather all subdomains
+subfinder -d redacted.com -o redact.txt
+
+2) using httpx to find live domains
+cat Domains.txt | httpx-toolkit > Active_Domains.txt
+
+3) using katana to crawl the js files
+katana -u livered.txt | grep ".js$" | tee redactjs
+
+4) using mantra to find sensitive api key
+cat redactjs | mantra
