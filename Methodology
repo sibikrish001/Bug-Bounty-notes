@@ -1,0 +1,1 @@
+1) In the burpsuite first go to the scope and right click the target website on the sitemap engagement_tools->discover_content . It will spider(crawl) the entire website. (analyse it for info disclosure).
