@@ -1,1 +1,5 @@
-1) In the burpsuite first go to the scope and right click the target website on the sitemap engagement_tools->discover_content . It will spider(crawl) the entire website. (analyse it for info disclosure).
+1) In the burpsuite first go to the scope and right click the target website on the sitemap engagement_tools->discover_content . 
+It will spider(crawl) the entire website. (analyse it for info disclosure).
+
+2)on the password reset token url check the social media sites requests like insta,facebook,x etc.  where there might be sending the password reset token
+refer:https://youtu.be/1E-XAeqbpX8?si=d2B2PtLR92H3f5Z1
