@@ -3,3 +3,15 @@ It will spider(crawl) the entire website. (analyse it for info disclosure).
 
 2)on the password reset token url check the social media sites requests like insta,facebook,x etc.  where there might be sending the password reset token
 refer:https://youtu.be/1E-XAeqbpX8?si=d2B2PtLR92H3f5Z1
+
+
+CSRF Vulnerability in Like Feature Allows Unauthorized User Interaction
+Requirements :-
+Two accounts 1.attacker
+2.victim
+## Steps to Reproduce:
+1. Login as an attacker and capture the "Like" request using Burp Suite while liking a post. 2. Right click and select --> Engagement tools --> Genertae CSRF POC
+Save the following HTML POC file:
+3. Login as the victim in another browser/session.
+4.Open the HTML file, and notice that the post is successfully liked without the victim's interaction.
+refer: https://youtu.be/vS1qmMXxUh8?si=ZM-d8FHgl69qtzOY
