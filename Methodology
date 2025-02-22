@@ -15,3 +15,17 @@ Save the following HTML POC file:
 3. Login as the victim in another browser/session.
 4.Open the HTML file, and notice that the post is successfully liked without the victim's interaction.
 refer: https://youtu.be/vS1qmMXxUh8?si=ZM-d8FHgl69qtzOY
+
+
+Subdomain enumeration:
+
+subfinder
+sublister
+amass
+assetfinder
+
+httpx for live domain
+
+404 -> to check it in subzy and wayback for to get any interesting bugs
+
+subzy
