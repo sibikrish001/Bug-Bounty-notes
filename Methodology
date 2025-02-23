@@ -20,9 +20,21 @@ refer: https://youtu.be/vS1qmMXxUh8?si=ZM-d8FHgl69qtzOY
 Subdomain enumeration:
 
 subfinder
+subfinder -d example.com -o subfinder_subdomains.txt
+
 sublister
+sublist3r -d example.com -v -o sublister_subdomains.txt
+
 amass
+amass enum --passive -d example.com > amass_subdomains.txt
+
 assetfinder
+assetfinder --subs-only example.com> assetfinder_subdomains.txt
+
+crt.sh -> A certificate transparency log viewer useful for finding subdomains.
+curl '<https://crt.sh/?q=%25.example.com&output=json>' | jq -r '.[].name_value' | grep -v '*' | sort | uniq > crt.sh_subdomains.txt
+
+Merging Results
 
 httpx for live domain
 
