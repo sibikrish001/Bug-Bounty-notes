@@ -35,9 +35,14 @@ crt.sh -> A certificate transparency log viewer useful for finding subdomains.
 curl '<https://crt.sh/?q=%25.example.com&output=json>' | jq -r '.[].name_value' | grep -v '*' | sort | uniq > crt.sh_subdomains.txt
 
 Merging Results
+cat *_subdomains.txt | sort | uniq > all_subdomains.txt
 
 httpx for live domain
+httpx -l all_subdomains.txt -o alive.txt
 
-404 -> to check it in subzy and wayback for to get any interesting bugs
+     |-> 404 -> to check it in subzy and wayback for to get any interesting bugs
 
-subzy
+Visual Inspection
+yes n | python3 ~/Tools/EyeWitness/Python/EyeWitness.py -f alive.txt -d alive_screenshots
+
+subzy -> for subdomain takeover
