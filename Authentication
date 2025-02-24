@@ -1,1 +1,7 @@
 1) see the verbose errors -> check this article for details(https://hackerone.com/reports/1166054)
+
+
+
+Password reset functionality bugs:
+
+1) reset rate limit -> send the example@gmail.com to Example@gmail.com -> to send more req to the mail
