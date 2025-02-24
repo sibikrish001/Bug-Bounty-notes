@@ -50,7 +50,8 @@ yes n | python3 ~/Tools/EyeWitness/Python/EyeWitness.py -f alive.txt -d alive_sc
 subzy -> for subdomain takeover
 
 httpx -l all_subdomains.txt -mc 404,403,500,502 -o potential_takeover.txt  
-subzy -targets potential_takeover.txt
+subzy run --targets potential_takeover.txt
+
 
 
 
