@@ -19,6 +19,7 @@ refer: https://youtu.be/vS1qmMXxUh8?si=ZM-d8FHgl69qtzOY
 
 Subdomain enumeration:
 
+
 subfinder
 subfinder -d example.com -o subfinder_subdomains.txt
 
@@ -46,3 +47,12 @@ Visual Inspection
 yes n | python3 ~/Tools/EyeWitness/Python/EyeWitness.py -f alive.txt -d alive_screenshots
 
 subzy -> for subdomain takeover
+
+
+
+
+Open redirect: 
+
+1) always check the redirect_url or anyother like state= (base64)
+
+2) change the header -> Forwarded: host=evil.com
