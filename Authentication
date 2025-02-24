@@ -5,3 +5,16 @@
 Password reset functionality bugs:
 
 1) reset rate limit -> send the example@gmail.com to Example@gmail.com -> to send more req to the mail
+
+
+
+Auth Bypass via url manipulation
+
+1)website xyz.com
+ requires the user's password in order to go to the profile edit page. 
+url: xyz. com/in/my-account/check-password/
+
+change to: xyz. com/in/my-account/profile/edit-profile/ and boom 💥, we can edit profile without password
+
+
+2) in the website 2fa just remove the rest of the contents , it can go directly into the account without verification
