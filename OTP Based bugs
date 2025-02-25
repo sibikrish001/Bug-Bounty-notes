@@ -5,3 +5,5 @@
 3) analyse and change the response
 
 4) send the 0000 -default otp to accept the req  -> check this for detail (https://cybersecuritywriteups.com/how-i-made-2000-from-an-easy-bug-431f45d8783e)
+
+5)check for the rareparameters and headers which will makes for the rate limit protections.
