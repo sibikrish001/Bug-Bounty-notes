@@ -60,3 +60,28 @@ Open redirect:
 1) always check the redirect_url or anyother like state= (base64)
 
 2) change the header -> Forwarded: host=evil.com
+
+
+
+WaybackURLs for Bug Bounty
+
+refer:https://hackersatty.medium.com/waybackurls-for-bug-bounty-how-to-find-hidden-vulnerabilities-sensitive-data-aea579849c4d
+
+Automation:
+
+#!/bin/bash
+domain=$1
+echo "[+] Enumerating subdomains..."
+subfinder -d $domain > subdomains.txt
+cat subdomains.txt | waybackurls > wayback_urls.txt
+echo "[+] Extracting authentication-related URLs..."
+grep -E "login|signin|admin|auth" wayback_urls.txt > auth_urls.txt
+echo "[+] Searching for sensitive information..."
+grep -E "api_key|token|session|password" wayback_urls.txt > sensitive_data.txt
+echo "[+] Finding XSS and redirect parameters..."
+grep -E "redirect=|next=|url=" wayback_urls.txt > redirect_urls.txt
+grep "?" wayback_urls.txt > param_urls.txt
+
+Run it with:
+
+bash bugbounty.sh target.com
