@@ -7,3 +7,15 @@
 4) send the 0000 -default otp to accept the req  -> check this for detail (https://cybersecuritywriteups.com/how-i-made-2000-from-an-easy-bug-431f45d8783e)
 
 5)check for the rareparameters and headers which will makes for the rate limit protections.
+
+2FA Bypass
+
+1️⃣Log in with valid credentials to receive an OTP.
+2️⃣ Capture the OTP request in a web proxy (Burp Suite, etc.).
+3️⃣ Identify the POST request where the OTP is submitted.
+4️⃣ Locate the RAREPARA parameter.
+5️⃣ Send multiple incorrect OTPs & observe the rate limit.
+6️⃣ Modify RAREPARA to an empty value & resend.
+7️⃣ Notice that the rate limit is bypassed.
+8️⃣ Use Burp Intruder to automate brute-force attempts.
+9️⃣ Gain unauthorized access once the correct OTP is found.
