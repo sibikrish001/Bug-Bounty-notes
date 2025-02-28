@@ -17,4 +17,16 @@ url: xyz. com/in/my-account/check-password/
 change to: xyz. com/in/my-account/profile/edit-profile/ and boom 💥, we can edit profile without password
 
 
-2) in the website 2fa just remove the rest of the contents , it can go directly into the account without verification
+2) in the website 2fa just remove the rest of the contents in the url , it can go directly into the account without verification
+
+Steps to Reproduce the Email Verification Bypass:
+
+1) sign-up with attacker mail and it will send the verification mail, don't click it
+
+2) on the profile change the mail with victim mail
+
+3)Now click the verification mail in attacker mailbox
+
+4) If it verifies victim mail using the old link, this indicates an email verification bypass.
+
+5) Check if you can now log in with victim mail without ever verifying it directly.
