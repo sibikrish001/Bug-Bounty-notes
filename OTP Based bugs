@@ -8,3 +8,6 @@
 
 5)check for the rareparameters and headers which will makes for the rate limit protections.
 
+6) Using null byte and CRLF (a tip from Zseano)
+
+%00, %0d%0a, %09, %0C, %20, %0
