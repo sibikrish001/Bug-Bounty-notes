@@ -35,6 +35,9 @@ assetfinder --subs-only example.com> assetfinder_subdomains.txt
 crt.sh -> A certificate transparency log viewer useful for finding subdomains.
 curl -s "https://crt.sh/?q=%25.example.com&output=json" | jq -r '.[].name_value' | grep -v '*' | sort | uniq > crt.sh_subdomains.txt
 
+using virustotal
+https://virustotal.com/vtapi/v2/domain/report?apikey=[YOUR_API_KEY]&domain=target.com
+
 
 Merging Results
 cat *_subdomains.txt | sort | uniq > all_subdomains.txt
